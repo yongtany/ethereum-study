@@ -32,6 +32,13 @@ describe('Inbox', () => {
   it('has a default message', async () => {
     // methods is  an object that contains all of the differece
     // functions that exist in our contract
-    const message =  await inbox.methods.message.call();
+    const message = await inbox.methods.message().call();
+    assert.equal(message, 'Hi there!');
+  });
+
+  it('can change the message', async () => {
+    await inbox.methods.setMessage('bye').send({ from: accounts[0] });
+    const message = await inbox.methods.message().call();
+    assert.equal(message, 'bye');
   });
 });
