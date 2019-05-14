@@ -6,13 +6,13 @@ import { Link } from '../routes';
 
 class ProjectIndex extends Component {
   static async getInitialProps() {
-    const campaigns = await factory.methods.getDeployedCampaigns().call();
+    const projects = await factory.methods.getDeployedProjects().call();
 
-    return { campaigns };
+    return { projects };
   }
 
-  renderCampaigns() {
-    const items = this.props.campaigns.map(address => {
+  renderProjects() {
+    const items = this.props.projects.map(address => {
       return {
         header: address,
         description: (
@@ -42,7 +42,7 @@ class ProjectIndex extends Component {
               />
             </a>
           </Link>
-          {this.renderCampaigns()}
+          {this.renderProjects()}
         </div>
       </Layout>
     );
