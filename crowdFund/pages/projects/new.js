@@ -5,7 +5,7 @@ import factory from '../../ethereum/factory';
 import web3 from '../../ethereum/web3';
 import { Router } from '../../routes';
 
-class CampaignNew extends Component {
+class ProjectNew extends Component {
   state = {
     minimumContribution: '',
     name: '',
@@ -72,4 +72,4 @@ class CampaignNew extends Component {
   }
 }
 
-export default CampaignNew;
+export default ProjectNew;

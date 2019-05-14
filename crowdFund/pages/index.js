@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import factory from '../ethereum/factory';
 import { Link } from '../routes';
 
-class CampaignIndex extends Component {
+class ProjectIndex extends Component {
   static async getInitialProps() {
     const campaigns = await factory.methods.getDeployedCampaigns().call();
 
@@ -16,8 +16,8 @@ class CampaignIndex extends Component {
       return {
         header: address,
         description: (
-          <Link route={`/campaigns/${address}`}>
-            <a>View Campaign</a>
+          <Link route={`/projects/${address}`}>
+            <a>View Project</a>
           </Link>
         ),
         fluid: true
@@ -31,12 +31,12 @@ class CampaignIndex extends Component {
     return (
       <Layout>
         <div>
-          <h3>Open Campaigns</h3>
-          <Link route="/campaigns/new">
+          <h3>Open Projects</h3>
+          <Link route="/projects/new">
             <a>
               <Button
                 floated="right"
-                content="Create Campaign"
+                content="Create Project"
                 icon="add circle"
                 primary
               />
@@ -49,4 +49,4 @@ class CampaignIndex extends Component {
   }
 }
 
-export default CampaignIndex;
+export default ProjectIndex;
