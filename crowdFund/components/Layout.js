@@ -14,7 +14,6 @@ import Header from './Header';
       </Head>
       <Header />
         {props.children}
-      <h1>Im a header</h1>
     </Container>
   )
  };

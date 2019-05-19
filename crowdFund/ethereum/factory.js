@@ -3,7 +3,7 @@ import ProjectFactory from './build/ProjectFactory.json';
 
 const instance = new web3.eth.Contract(
   JSON.parse(ProjectFactory.interface),
-  '0xE60C1852c917E5f5723C5c1507eb6CC217D07459'
+  '0x9d199F5242d8771b893ebE269C4bc1AB091E155f'
 );
 
 export default instance;
