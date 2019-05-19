@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Layout from '../../components/Layout';
 import Project from '../../ethereum/project';
 import web3 from '../../ethereum/web3';
+import ContributeForm from '../../components/ContributionForm';
 
 import { Card } from 'semantic-ui-react';
 
@@ -72,6 +73,7 @@ class ProjectDetail extends Component {
       <Layout>
         <h3>Project Detail</h3>
         {this.renderCards()}
+        <ContributeForm />
       </Layout>
     );
   }
