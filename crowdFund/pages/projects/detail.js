@@ -4,7 +4,7 @@ import Project from '../../ethereum/project';
 import web3 from '../../ethereum/web3';
 import ContributeForm from '../../components/ContributionForm';
 
-import { Card } from 'semantic-ui-react';
+import { Card, Grid } from 'semantic-ui-react';
 
 class ProjectDetail extends Component {
   static async getInitialProps(props) {
@@ -72,8 +72,15 @@ class ProjectDetail extends Component {
     return  (
       <Layout>
         <h3>Project Detail</h3>
-        {this.renderCards()}
-        <ContributeForm />
+        <Grid>
+          <Grid.Column width={10}>
+            {this.renderCards()}
+          </Grid.Column>
+
+          <Grid.Column width={6}>
+            <ContributeForm />
+          </Grid.Column>
+        </Grid>
       </Layout>
     );
   }
