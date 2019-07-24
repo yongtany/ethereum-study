@@ -1,4 +1,4 @@
-## Etherium-study
+## Ethereum-study
 
 ---
 
